@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {CommonServiceService} from '../common-service.service';
 
 @Component({
   selector: 'app-header',
@@ -7,13 +8,13 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() clicked = new EventEmitter();
-  constructor() { }
+  // @Output() clicked = new EventEmitter();
+  constructor(private commonService: CommonServiceService) { }
 
   ngOnInit() {
   }
 
   openNav() {
-    this.clicked.emit();
+    this.commonService.clicked.next();
   }
 }

@@ -1,13 +1,5 @@
-<app-header (clicked)="openSidePane(mySidepanel)"></app-header>
+<app-header></app-header>
 
-<div id="mySidepanel" class="sidepanel" #mySidepanel>
-  <a href="javascript:void(0)" class="closebtn" (click)="closeNav(mySidepanel)">&times;</a>
-  <a [routerLink]="['/users']">Users</a>
-  <a >Option 2</a>
-  <a >Option 3</a>
-  <a >Option 4</a>
-</div>
-
-<!--<app-side-panel></app-side-panel>-->
+<app-side-panel></app-side-panel>
 
 <router-outlet></router-outlet>

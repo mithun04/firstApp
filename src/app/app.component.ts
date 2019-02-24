@@ -11,8 +11,4 @@ export class AppComponent {
   openSidePane(mySidepanel) {
          mySidepanel.style.width = '250px';
   }
-    /* Set the width of the sidebar to 0 (hide it) */
-   closeNav(mySidepanel) {
-      mySidepanel.style.width = '0';
-  }
 }
